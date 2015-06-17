@@ -1,0 +1,11 @@
+**/target
+**/build
+/out
+atlassian-ide-plugin.xml
+
+#Idea
+/.idea
+/.gradle
+*.iml
+*.ipr
+*.iws

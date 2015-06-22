@@ -1,5 +1,6 @@
 package com.rafalkalita.rest;
 
+import com.rafalkalita.exceptions.NotSupportedOperationException;
 import org.springframework.boot.autoconfigure.web.ErrorController;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,7 +19,7 @@ public class ArticleErrorController implements ErrorController {
     }
 
     @RequestMapping(value = PATH)
-    public com.rafalkalita.domain.Error handleError() {
-        return new com.rafalkalita.domain.Error("This operation is not supported");
+    public NotSupportedOperationException handleError() {
+        return new NotSupportedOperationException("This operation is not supported");
     }
 }
